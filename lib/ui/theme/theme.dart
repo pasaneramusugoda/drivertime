@@ -10,8 +10,7 @@ ThemeData appTheme() {
     primaryColor: AppColors.primary,
     accentColor: AppColors.accent,
     fontFamily: R.fontFamily.sFProDisplay,
-    bottomAppBarColor: Colors.black,
-    // textTheme: textTheme,
+    canvasColor: Colors.white,
   );
 
   return base.copyWith(

@@ -7,15 +7,16 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.transparent,
       child: Stack(
         alignment: Alignment.center,
         children: [
           CustomPaint(
-            size: Size.fromHeight(100),
+            size: Size.fromHeight(120),
             painter: AppBarBackground(),
           ),
           Positioned(
-            top: MediaQuery.of(context).padding.top,
+            top: MediaQuery.of(context).viewPadding.top + 8,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,

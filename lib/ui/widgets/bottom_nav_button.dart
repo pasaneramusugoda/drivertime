@@ -21,7 +21,7 @@ class BottomNavButton extends ViewModelWidget<MainViewModel> {
       borderRadius: BorderRadius.circular(42.0),
       child: Container(
         margin:
-            const EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0, bottom: 2.0),
+            const EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0, bottom: 8.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -29,7 +29,7 @@ class BottomNavButton extends ViewModelWidget<MainViewModel> {
                 ? Container(child: iconWidget)
                 : Icon(
                     icon,
-                    size: 24,
+                    size: 32,
                     color: model.currentNavItem == item
                         ? AppColors.accent
                         : Colors.black87,
