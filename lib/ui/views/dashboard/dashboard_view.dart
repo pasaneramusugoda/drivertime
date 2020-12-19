@@ -4,6 +4,7 @@ import 'package:drive_time/ui/views/dashboard/dashboard_view_model.dart';
 import 'package:drive_time/ui/views/dashboard/driver_info.dart';
 import 'package:drive_time/ui/views/dashboard/driver_tasks.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:stacked/stacked.dart';
 
 class DashboardView extends ViewModelBuilderWidget<DashboardViewModel> {
@@ -11,7 +12,7 @@ class DashboardView extends ViewModelBuilderWidget<DashboardViewModel> {
   Widget builder(BuildContext context, DashboardViewModel model, Widget child) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(0.0),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -43,5 +44,5 @@ class DashboardView extends ViewModelBuilderWidget<DashboardViewModel> {
 
   @override
   DashboardViewModel viewModelBuilder(BuildContext context) =>
-      DashboardViewModel();
+      DashboardViewModel(Provider.of(context));
 }

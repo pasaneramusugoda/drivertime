@@ -14,9 +14,31 @@ class AppStyle {
         color: Colors.black87,
         fontWeight: FontWeight.w700,
       );
+  static TextStyle get textElevatedButton => TextStyle(
+    fontFamily: R.fontFamily.sFProDisplay,
+    fontSize: 18,
+    color: Colors.black87,
+    fontWeight: FontWeight.w400,
+  );
   static TextStyle get textRemarks => TextStyle(
         fontFamily: R.fontFamily.sFProDisplay,
         fontSize: 14,
         fontWeight: FontWeight.w600,
       );
+  static TextStyle get textDialogTitle => TextStyle(
+    fontFamily: R.fontFamily.sFProDisplay,
+    fontSize: 28,
+    fontWeight: FontWeight.w700,
+  );
+  static TextStyle get infoDate => TextStyle(
+    fontFamily: R.fontFamily.sFProDisplay,
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
+  );
+  static TextStyle get info => TextStyle(
+    fontFamily: R.fontFamily.sFProDisplay,
+    fontSize: 14,
+    color: Colors.black54,
+    fontWeight: FontWeight.w500,
+  );
 }

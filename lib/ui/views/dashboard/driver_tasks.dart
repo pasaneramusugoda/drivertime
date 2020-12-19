@@ -2,6 +2,7 @@ import 'package:drive_time/r.g.dart';
 import 'package:drive_time/ui/theme/color.dart';
 import 'package:drive_time/ui/theme/styles.dart';
 import 'package:drive_time/ui/views/dashboard/dashboard_view_model.dart';
+import 'package:drive_time/ui/views/dashboard/driver_task_start.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -11,18 +12,7 @@ class DriverTasks extends ViewModelWidget<DashboardViewModel> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        TextButton(
-          onPressed: model.onClickStart,
-          style: TextButton.styleFrom(backgroundColor: AppColors.driving),
-          child: Column(
-            children: [
-              Image(
-                image: R.image.ic_start(),
-              ),
-              Text('Start Driving'.toUpperCase()),
-            ],
-          ),
-        ),
+        DriverTaskStart(),
         const SizedBox(height: 16),
         Row(
           children: [
@@ -69,8 +59,9 @@ class DriverTasks extends ViewModelWidget<DashboardViewModel> {
         ),
         const SizedBox(height: 16),
         TextButton(
-          onPressed: model.onClickStart,
-          style: TextButton.styleFrom(backgroundColor: AppColors.day),
+          onPressed: model.onClickEnd,
+          style: TextButton.styleFrom(backgroundColor: AppColors.day,
+            textStyle: AppStyle.textButton,),
           child: Column(
             children: [
               Image(

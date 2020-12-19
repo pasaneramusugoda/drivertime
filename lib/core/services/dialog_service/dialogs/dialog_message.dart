@@ -79,33 +79,28 @@ class _DialogMessageState extends State<DialogMessage> {
   }
 
   _dialogBody(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
+    return Stack(
+      alignment: Alignment.center,
       children: <Widget>[
-        Stack(
-          alignment: Alignment.topCenter,
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(
-                left: 16.0,
-                right: 16.0,
-                top: widget.type != DialogType.Info ? 42.0 : 16.0,
-              ),
-              padding: EdgeInsets.only(
-                top: AppDim.size16,
-                bottom: AppDim.size16,
-                left: AppDim.size16,
-                right: AppDim.size16,
-              ),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(20.0)),
-              ),
-              child: _bodyContent(),
-            ),
-            // if (widget.type != DialogType.Info) Image(image: widget.type.image),
-          ],
+        Container(
+          margin: EdgeInsets.only(
+            left: 16.0,
+            right: 16.0,
+            top: widget.type != DialogType.Info ? 42.0 : 16.0,
+          ),
+          padding: EdgeInsets.only(
+            top: AppDim.size16,
+            bottom: AppDim.size16,
+            left: AppDim.size16,
+            right: AppDim.size16,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(24.0)),
+          ),
+          child: _bodyContent(),
         ),
+        // if (widget.type != DialogType.Info) Image(image: widget.type.image),
       ],
     );
   }

@@ -1,3 +1,5 @@
+import 'package:drive_time/core/models/drive_info.dart';
+import 'package:drive_time/core/services/dialog_service/dialogs/start_driving/dialog_start_driving.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
@@ -50,6 +52,13 @@ class DialogService {
         negativeCallback: negativeCallBack,
         type: type,
       ),
+    );
+  }
+
+  Future startDriving() {
+    return showDialog(
+      context: navigationService.navigatorKey.currentState.context,
+      builder: (context) => DialogStartDriving(),
     );
   }
 }
